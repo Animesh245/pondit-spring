@@ -13,9 +13,9 @@ public interface StatusDAO {
 
     Status getById(Long id);
 
-    Long update(Status status);
+    void update(Status status);
 
-    Long delete(Long id);
+    void delete(Long id);
 
     List<Status> getAll();
 }

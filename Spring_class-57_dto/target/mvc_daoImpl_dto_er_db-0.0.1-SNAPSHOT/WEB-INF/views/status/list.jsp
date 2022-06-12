@@ -21,7 +21,7 @@
     <table class="table table-bordered">
         <thead class="thead-dark">
         <tr>
-            <th scope="col">Id</th>
+            <th scope="col">ID</th>
             <th scope="col">Title</th>
             <th scope="col">Description</th>
             <th scope="col">Privacy</th>
@@ -43,7 +43,7 @@
                     <img src="/images/${image.getAttachmentPath()}"  height="100px" width="100px" style="object-fit: cover" class="img-thumbnail"/>
                 </c:forEach></td>
                 <td><i onclick="location='/status/update/${status.getId()}'" class="fa-solid fa-pen-to-square"></i></td>
-                <td><i onclick="location='/statu/delete/${status.getId()}'" class="fa-solid fa-trash-can"></i></td>
+                <td><i onclick="location='/status/delete/${status.getId()}'" class="fa-solid fa-trash-can"></i></td>
             </tr>
         </c:forEach>
         </tbody>

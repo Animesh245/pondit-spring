@@ -35,7 +35,7 @@ public class StatusController {
     @Autowired
     private AttachmentDAO attachmentDAO;
 
-    @GetMapping("create")
+    @GetMapping("/create")
     public ModelAndView create(Model model) {
         List<Location> locations = locationDAO.getLocationList();
         List<String> locationList = new ArrayList<>();

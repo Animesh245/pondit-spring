@@ -141,7 +141,7 @@ public class UserController {
     }
 
     @GetMapping(value = "/delete/{id}")
-    public String update(Model model, @PathVariable("id") Long id) {
+    public String deleteUser(Model model, @PathVariable("id") Long id) {
         userDAO.deleteUser(id);
         return "user/list";
     }

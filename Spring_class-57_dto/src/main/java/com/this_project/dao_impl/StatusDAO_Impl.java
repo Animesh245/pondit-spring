@@ -37,30 +37,25 @@ public class StatusDAO_Impl implements StatusDAO {
     }
 
     @Override
-    public Long update(Status status) {
-        Long id = -1L;
+    public void update(Status status) {
         Session session = sessionFactory.getCurrentSession();
         try {
             session.saveOrUpdate(status);
-            id = status.getId();
+//            id = status.getId();
         }catch (Exception e){
             e.printStackTrace();
             session.getTransaction().rollback();
         }
         session.flush();
-
-        return id;
     }
 
     @Override
-    public Long delete(Long id) {
+    public void delete(Long id) {
         Session session = sessionFactory.getCurrentSession();
         Status status = session.load(Status.class, id);
 
         session.delete(status);
         session.flush();
-
-        return id;
     }
 
     @Override
